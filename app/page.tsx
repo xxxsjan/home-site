@@ -24,10 +24,10 @@ export default function Home() {
       name: "前端工具",
       href: "https://web-tool.dolam.fun",
     },
-    {
-      name: "崩铁助手",
-      href: "https://star-rail.dolam.fun",
-    },
+    // {
+    //   name: "崩铁助手",
+    //   href: "https://star-rail.dolam.fun",
+    // },
     // {
     //   name: "原神素材",
     //   href: "https://genshin-home.vercel.app/",
