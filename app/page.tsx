@@ -29,6 +29,7 @@ export default function Home() {
       src: "/web-tool.png",
     },
   ];
+
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-lg text-center justify-center">
@@ -56,10 +57,13 @@ export default function Home() {
           </Card>
         ))}
       </div>
-      <div className="flex gap-3">
+      <div className="flex animate-bounce">
         <Link
           isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
+          className={
+            buttonStyles({ variant: "bordered", radius: "full" }) +
+            " animate-pulse"
+          }
           href={siteConfig.links.github}
         >
           <GithubIcon size={20} />
