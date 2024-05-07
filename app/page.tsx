@@ -28,6 +28,11 @@ export default function Home() {
       href: "https://web-tool.dolam.fun",
       src: "/web-tool.png",
     },
+    {
+      name: "简书",
+      href: "https://www.jianshu.com/u/2b406a3be47b",
+      src: "/jianshu.png",
+    },
   ];
 
   return (
