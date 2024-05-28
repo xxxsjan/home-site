@@ -16,6 +16,8 @@ import {
   Image,
 } from "@nextui-org/react";
 
+import { useEffect } from "react";
+
 export default function Home() {
   const siteInfo = [
     {
@@ -34,6 +36,14 @@ export default function Home() {
       src: "/jianshu.png",
     },
   ];
+
+  useEffect(() => {
+    var _hmt: any = _hmt || [];
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?7fe39247b8cad5af5967d23f12f747a5";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode!.insertBefore(hm, s);
+  }, []);
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
