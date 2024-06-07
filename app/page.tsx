@@ -35,6 +35,11 @@ export default function Home() {
       href: "https://www.jianshu.com/u/2b406a3be47b",
       src: "/jianshu.png",
     },
+    {
+      name: "ChatGPT",
+      href: "https://chat-gpt.dolam.fun",
+      src: "/chat.png",
+    },
   ];
 
   useEffect(() => {
@@ -54,7 +59,7 @@ export default function Home() {
         {siteInfo.map((item) => (
           <Card className="py-4" key={item.name}>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-              <p className="text-tiny uppercase font-bold">{item.name}</p>
+              <p className="text-tiny font-bold">{item.name}</p>
 
               {/* <small className="text-default-500">12 Tracks</small> */}
               {/* <h4 className="font-bold text-large">Frontend Radio</h4> */}
