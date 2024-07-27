@@ -22,12 +22,14 @@ export default function Home() {
   const siteInfo = [
     {
       name: "前端文档库",
-      href: "https://blog.dolam.fun",
+      // href: "https://blog.dolam.fun",
+      href: "https://super-blog-navy.vercel.app",
       src: "/blog.png",
     },
     {
       name: "前端工具",
-      href: "https://web-tool.dolam.fun",
+      // href: "https://web-tool.dolam.fun",
+      href: "https://wen-tool.vercel.app",
       src: "/web-tool.png",
     },
     {
@@ -37,7 +39,8 @@ export default function Home() {
     },
     {
       name: "ChatGPT",
-      href: "https://chat-gpt.dolam.fun",
+      // href: "https://chat-gpt.dolam.fun",
+      href: "https://super-blog-navy.vercel.app",
       src: "/chat.png",
     },
   ];
