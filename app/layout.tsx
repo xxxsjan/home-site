@@ -57,7 +57,7 @@ export default function RootLayout({
               </Link>
               <p className="text-white ml-2">
                 {/* © 2019 - 2024  */}
-                <a href="https://beian.miit.gov.cn">粤ICP备2024285819号</a>
+                <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024285819号</a>
                 <a href="https://beian.mps.gov.cn/#/query/webSearch"></a>
               </p>
             </footer>
