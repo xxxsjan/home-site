@@ -9,11 +9,13 @@ async function run() {
   const { page, browser } = await createPage();
   await page.goto("https://blog.dolam.fun/");
 
-  const filename = path.join(__dirname, "image.jpg");
+  const filename = path.join(__dirname, "dolam.jpg");
 
   await page.screenshot({ path: filename });
 
   await browser.close();
+
+  process.exit();
 }
 async function createPage() {
   const browser = await puppeteer.launch({
