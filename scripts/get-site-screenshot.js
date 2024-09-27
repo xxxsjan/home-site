@@ -7,11 +7,15 @@ run();
 
 async function run() {
   const { page, browser } = await createPage();
-  // https://blog.dolam.fun
-  // https://web-tool.dolam.fun
-  await page.goto("https://web-tool.dolam.fun/");
 
-  const filename = path.join(__dirname, "../public", "web-tool.png");
+  const arr = [
+    "https://www.jianshu.com/u/2b406a3be47b",
+    "https://blog.dolam.fun",
+    "https://web-tool.dolam.fun",
+  ];
+  await page.goto(arr[0]);
+
+  const filename = path.join(__dirname, "../public", "jianshu.png");
 
   await page.screenshot({ path: filename });
 
@@ -21,7 +25,7 @@ async function run() {
 }
 async function createPage() {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: false,
     executablePath:
       "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   });
