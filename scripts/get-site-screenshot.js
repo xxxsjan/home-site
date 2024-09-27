@@ -7,9 +7,11 @@ run();
 
 async function run() {
   const { page, browser } = await createPage();
-  await page.goto("https://blog.dolam.fun/");
+  // https://blog.dolam.fun
+  // https://web-tool.dolam.fun
+  await page.goto("https://web-tool.dolam.fun/");
 
-  const filename = path.join(__dirname, "dolam.jpg");
+  const filename = path.join(__dirname, "../public", "web-tool.png");
 
   await page.screenshot({ path: filename });
 
