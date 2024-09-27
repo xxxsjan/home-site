@@ -60,7 +60,7 @@ export const Navbar = () => {
             {/* <p className="font-bold text-inherit">ACME</p> */}
             {process.env.NODE_ENV !=='development'&&<img
               className="visitor"
-              src="https://visitor-badge.laobi.icu/badge?page_id=http://dolam.fun"
+              src="https://visitor-badge.laobi.icu/badge?page_id=https://home.dolam.fun"
               alt="visitor"
             />}
           </NextLink>
