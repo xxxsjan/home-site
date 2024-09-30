@@ -9,15 +9,26 @@ async function run() {
   const { page, browser } = await createPage();
 
   const arr = [
-    "https://www.jianshu.com/u/2b406a3be47b",
-    "https://blog.dolam.fun",
-    "https://web-tool.dolam.fun",
+    {
+      url: "https://web-tool.dolam.fun",
+      filename: "web-tool.png",
+    },
+    {
+      url: "https://blog.dolam.fun",
+      filename: "blog.png",
+    },
+    {
+      url: "https://www.jianshu.com/u/2b406a3be47b",
+      filename: "jianshu.png",
+    },
   ];
-  await page.goto(arr[0]);
+  for (const item of arr) {
+    await page.goto(item.url);
 
-  const filename = path.join(__dirname, "../public", "jianshu.png");
+    const filename = path.join(__dirname, "../public", item.filename);
 
-  await page.screenshot({ path: filename });
+    await page.screenshot({ path: filename });
+  }
 
   await browser.close();
 
