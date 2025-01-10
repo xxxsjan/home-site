@@ -21,9 +21,15 @@ async function run() {
       url: "https://www.jianshu.com/u/2b406a3be47b",
       filename: "jianshu.png",
     },
+    {
+      url: "https://chat-gpt-next-web-tau-silk-44.vercel.app",
+      filename: "chat.png",
+    },
   ];
   for (const item of arr) {
     await page.goto(item.url);
+
+    await sleep(1000);
 
     const filename = path.join(__dirname, "../public", item.filename);
 
@@ -44,4 +50,8 @@ async function createPage() {
   await page.setViewport({ width: 1920, height: 1080 });
 
   return { browser, page };
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
