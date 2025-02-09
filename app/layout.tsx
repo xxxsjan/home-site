@@ -21,13 +21,12 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport:Viewport = {
+export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
-}
-
+};
 
 export default function RootLayout({
   children,
@@ -61,7 +60,7 @@ export default function RootLayout({
               </Link>
               <p className="text-white ml-2">
                 {/* © 2019 - 2024  */}
-                <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024285819号</a>
+                {/* <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024285819号</a> */}
                 <a href="https://beian.mps.gov.cn/#/query/webSearch"></a>
               </p>
             </footer>
