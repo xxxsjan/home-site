@@ -56,13 +56,15 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo/>
+            <Logo />
             {/* <p className="font-bold text-inherit">ACME</p> */}
-            {process.env.NODE_ENV !=='development'&&<img
-              className="visitor"
-              src="https://visitor-badge.laobi.icu/badge?page_id=https://home.dolam.fun"
-              alt="visitor"
-            />}
+            {process.env.NODE_ENV !== "development" && (
+              <img
+                className="visitor"
+                src="https://visitor-badge.laobi.icu/badge?page_id=https://home.odep.xyz"
+                alt="visitor"
+              />
+            )}
           </NextLink>
         </NavbarBrand>
 

@@ -2,9 +2,10 @@
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
+import { siteConfig, siteInfo } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+
 import {
   Link,
   Button,
@@ -19,38 +20,6 @@ import {
 import { useEffect } from "react";
 
 export default function Home() {
-  const siteInfo = [
-    {
-      name: "前端文档库",
-      // href: "https://blog.dolam.fun",
-      href: "https://super-blog-navy.vercel.app",
-      src: "/blog.png",
-    },
-    {
-      name: "前端工具",
-      // href: "https://web-tool.dolam.fun",
-      href: "https://wen-tool.vercel.app",
-      src: "/web-tool.png",
-    },
-    {
-      name: "简书",
-      href: "https://www.jianshu.com/u/2b406a3be47b",
-      src: "/jianshu.png",
-    },
-    // {
-    //   name: "ChatGPT",
-    //   // href: "https://chat-gpt.dolam.fun",
-    //   href: "https://chat-gpt-next-web-tau-silk-44.vercel.app",
-    //   src: "/chat.png",
-    // },
-    {
-      name: "lobe-chat",
-      // href: "https://chat-gpt.dolam.fun",
-      href: "https://lobe-chat-nu-sepia.vercel.app",
-      src: "/lobe-chat.png",
-    },
-  ];
-
   useEffect(() => {
     var _hmt: any = _hmt || [];
     var hm = document.createElement("script");

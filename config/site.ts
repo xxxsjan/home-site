@@ -67,3 +67,29 @@ export const siteConfig = {
     sponsor: "https://patreon.com/jrgarciadev",
   },
 };
+const host = "odep.xyz";
+export const siteInfo = [
+  {
+    name: "前端文档库",
+    href: `https://blog.${host}`,
+    // href: "https://super-blog-navy.vercel.app",
+    src: "/blog.png",
+  },
+  {
+    name: "前端工具",
+    // href: `https://web-tool.${host}`,
+    href: "https://wen-tool.vercel.app",
+    src: "/web-tool.png",
+  },
+  {
+    name: "简书",
+    href: "https://www.jianshu.com/u/2b406a3be47b",
+    src: "/jianshu.png",
+  },
+  {
+    name: "lobe-chat",
+    // href: `https://lobe-chat.${host}`,
+    href: "https://lobe-chat-nu-sepia.vercel.app",
+    src: "/lobe-chat.png",
+  },
+];
