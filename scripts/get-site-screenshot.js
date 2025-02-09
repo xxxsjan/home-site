@@ -9,21 +9,25 @@ async function run() {
   const { page, browser } = await createPage();
 
   const arr = [
+    // {
+    //   url: "https://web-tool.dolam.fun",
+    //   filename: "web-tool.png",
+    // },
+    // {
+    //   url: "https://blog.dolam.fun",
+    //   filename: "blog.png",
+    // },
+    // {
+    //   url: "https://www.jianshu.com/u/2b406a3be47b",
+    //   filename: "jianshu.png",
+    // },
+    // {
+    //   url: "https://chat-gpt-next-web-tau-silk-44.vercel.app",
+    //   filename: "chat.png",
+    // },
     {
-      url: "https://web-tool.dolam.fun",
-      filename: "web-tool.png",
-    },
-    {
-      url: "https://blog.dolam.fun",
-      filename: "blog.png",
-    },
-    {
-      url: "https://www.jianshu.com/u/2b406a3be47b",
-      filename: "jianshu.png",
-    },
-    {
-      url: "https://chat-gpt-next-web-tau-silk-44.vercel.app",
-      filename: "chat.png",
+      url: "https://lobe-chat-nu-sepia.vercel.app",
+      filename: "lobe-chat.png",
     },
   ];
   for (const item of arr) {
