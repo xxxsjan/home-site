@@ -59,7 +59,7 @@ export default function RootLayout({
                 <p className="text-primary">NextUI</p>
               </Link>
               <p className="text-white ml-2">
-                {/* © 2019 - 2024  */}
+                © 2019 - 2025
                 {/* <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024285819号</a> */}
                 <a href="https://beian.mps.gov.cn/#/query/webSearch"></a>
               </p>
