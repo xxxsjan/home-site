@@ -3,7 +3,7 @@ name: push触发服务器部署
 on:
   push:
     branches:
-      - main  # 可根据需要修改为其他分支
+      - main
 
 jobs:
   deploy:
