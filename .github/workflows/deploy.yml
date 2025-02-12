@@ -20,19 +20,28 @@ jobs:
 
       - name: Execute script on server
         run: |
-          ssh -o StrictHostKeyChecking=no root@47.121.117.97 << EOF
-            cd /www/wwwroot
-            if [ -d "home-site" ]; then
-                git pull origin main
-            else
-                git clone https://github.com/xxxsjan/home-site
-            fi
-            cd /www/wwwroot/home-site
-            git pull origin main
-            git checkout main
-            npm install
-            npm run build
-            pm2 delete home-site | true
-            pm2 start npm --name "home-site" -- run start
-            pm2 save
-          EOF
+          REMOTE_SERVER="root@47.121.117.97"
+          ROOT_DIR="/www/wwwroot"
+          PROJECT_NAME="home-site"
+          PROJECT_DIR="$ROOT_DIR/$PROJECT_NAME"
+          GITHUB_USER="xxxsjan"
+          REPO_URL="https://github.com/${GITHUB_USER}/${PROJECT_NAME}"
+
+          SSH_COMMAND="ssh -o StrictHostKeyChecking=no $REMOTE_SERVER << EOF
+              cd $ROOT_DIR
+              if [ -d \"$PROJECT_NAME\" ]; then
+                  git -C $PROJECT_DIR pull origin main
+              else
+                  git clone $REPO_URL
+              fi
+              cd $PROJECT_DIR
+              git pull origin main
+              git checkout main
+              npm install
+              npm run build
+              pm2 delete $PROJECT_NAME || true
+              pm2 start npm --name \"$PROJECT_NAME\" -- run start
+              pm2 save
+          EOF"
+
+          eval "$SSH_COMMAND"
