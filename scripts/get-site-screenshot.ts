@@ -2,7 +2,6 @@ import path from "path";
 import puppeteer from "puppeteer-core";
 import { siteInfo } from "../config/site";
 
-console.log("siteInfo: ", siteInfo);
 // setInterval(() => {}, 1000);
 run();
 
@@ -11,11 +10,15 @@ async function run() {
 
   const arr = siteInfo;
   for (const item of arr) {
+    console.log("item: ", item);
     await page.goto(item.href);
 
     // await sleep(1000);
-    await page.waitForNavigation({ waitUntil: "networkidle0" });
-
+    await page
+      .waitForNavigation({ waitUntil: "load", timeout: 3000 })
+      .catch((err) => {
+        return err;
+      });
     const filename = path.join(__dirname, "../public", item.src);
 
     await page.screenshot({ path: filename });
