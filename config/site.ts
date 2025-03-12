@@ -77,8 +77,8 @@ export const siteInfo = [
   },
   {
     name: "前端工具",
-    // href: `https://web-tool.${host}`,
-    href: "https://wen-tool.vercel.app",
+    href: `https://web-tool.${host}`,
+    // href: "https://wen-tool.vercel.app",
     src: "/web-tool.png",
   },
   {
