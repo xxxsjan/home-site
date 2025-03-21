@@ -76,7 +76,7 @@ export const siteInfo = [
     src: "/blog.png",
   },
   {
-    name: "前端工具",
+    name: "工具合集",
     href: `https://web-tool.${host}`,
     // href: "https://wen-tool.vercel.app",
     src: "/web-tool.png",
