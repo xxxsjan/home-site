@@ -49,7 +49,7 @@ export default function RootLayout({
               {children}
             </main>
             <footer className="w-full flex flex-col items-center justify-center py-3">
-              <Link
+              {/* <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
                 href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
@@ -57,7 +57,7 @@ export default function RootLayout({
               >
                 <span className="text-default-600">Powered by</span>
                 <p className="text-primary">NextUI</p>
-              </Link>
+              </Link> */}
               <p className="text-white ml-2">
                 © 2019 - 2025
                 {/* <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2024285819号</a> */}
