@@ -3,9 +3,8 @@ import React, { useState, useEffect } from 'react';
 
 import {
   GithubIcon,
-  SearchIcon,
 } from "@/components/icons";
-
+import { Book, Github, Toolbox } from "lucide-react";
 const Homepage = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -88,15 +87,15 @@ const Homepage = () => {
             <div className="grid grid-cols-3 gap-4 w-full max-w-3xl">
               {
                 [
-                  { icon: <GithubIcon className="text-white" />, label: '博客', link: 'https://github.com/xxxsjan' },
-                  { icon: <GithubIcon className="text-white" />, label: '工具', link: 'https://tool.odep.shop/' },
+                  { icon: <Book className="text-white" />, label: '博客', link: 'https://github.com/xxxsjan' },
+                  { icon: <Toolbox className="text-white" />, label: '工具', link: 'https://tool.odep.shop/' },
                 ].map((item, idx) => (
                   <div
                     key={idx}
                     className="transition-all p-6 rounded-xl flex items-center justify-center gap-3 text-white text-lg  rounded-[6px] bg-black/25 backdrop-blur-[10px] cursor-pointer hover:bg-black/40 hover:scale-105 hover:shadow-lg"
                     onClick={() => window.open(item.link, '_blank')}
                   >
-                    {/* {item.icon} */}
+                    {item.icon}
                     <span>{item.label}</span>
                   </div>
                 ))
@@ -104,7 +103,6 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-
       </div>
       <div className="absolute top-0 left-0 w-full h-full transition duration-250 z-[-1] ">
         <img src="/background7.jpg" alt="" />
