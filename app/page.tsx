@@ -105,7 +105,7 @@ const Homepage = () => {
         </div>
       </div>
       <div className="absolute top-0 left-0 w-full h-full transition duration-250 z-[-1] ">
-        <img src="/background7.jpg" alt="" />
+        <img src="/background7.jpg" alt="" className='w-full h-full' />
       </div>
     </div>
   );
