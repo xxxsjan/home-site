@@ -54,7 +54,7 @@ const Homepage = () => {
               <span className="text-white/40 text-4xl -mt-2">“</span>
               <div>
                 <p className="text-white italic text-xl mb-2">Hello Stranger!</p>
-                <p className="text-white/80">It's not a bug, it's a feature, works on my machine.</p>
+                <p className="text-white/80">Bug 是意外，Feature 是惊喜。</p>
               </div>
               <span className="text-white/40 text-4xl -mb-2 self-end">”</span>
             </div>
