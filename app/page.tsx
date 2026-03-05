@@ -93,7 +93,7 @@ const Homepage = () => {
                 ].map((item, idx) => (
                   <div
                     key={idx}
-                    className="transition-all p-6 rounded-xl flex items-center justify-center gap-3 text-white text-lg  rounded-[6px] bg-black/25 backdrop-blur-[10px]"
+                    className="transition-all p-6 rounded-xl flex items-center justify-center gap-3 text-white text-lg  rounded-[6px] bg-black/25 backdrop-blur-[10px] cursor-pointer hover:bg-black/40 hover:scale-105 hover:shadow-lg"
                     onClick={() => window.open(item.link, '_blank')}
                   >
                     {/* {item.icon} */}
