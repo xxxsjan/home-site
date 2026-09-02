@@ -5,6 +5,7 @@ import {
   GithubIcon,
 } from "@/components/icons";
 import { Book, Github, Toolbox } from "lucide-react";
+import { fontLed } from "@/config/fonts";
 
 const QUOTES = [
   { text: "博文天下，遍理人间！", author: "网络" },
@@ -244,7 +245,7 @@ const Homepage = () => {
               <div className="text-white text-lg mb-2">
                 {currentTime ? formatDate(currentTime) : "---- 年 -- 月 -- 日 --"}
               </div>
-              <div className="text-white text-5xl font-mono font-bold my-2">
+              <div className={`text-white text-5xl my-2 ${fontLed.className}`}>
                 {currentTime ? formatTime(currentTime) : "--:--:--"}
               </div>
               <div className="text-white/60">
