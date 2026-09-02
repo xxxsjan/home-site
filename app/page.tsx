@@ -20,7 +20,7 @@ const QUOTES = [
   { text: "生活不止眼前的 Bug，还有诗和远方。", author: "改编" },
 ];
 
-const BACKGROUNDS = Array.from({ length: 10 }, (_, i) => `/background${i + 1}.jpg`);
+const BACKGROUNDS = Array.from({ length: 10 }, (_, i) => `/backgrounds/background${i + 1}.jpg`);
 
 const DEFAULT_LOCATION = { latitude: 39.9042, longitude: 116.4074, city: "北京" };
 
@@ -289,6 +289,19 @@ const Homepage = () => {
       <div className="absolute top-0 left-0 w-full h-full transition duration-250 z-[-1] ">
         <img src={background} alt="" className="w-full h-full object-cover" />
       </div>
+      {/* <footer className="absolute bottom-4 left-0 w-full text-center text-white/60 text-sm z-10">
+        <p>
+          Copyright © {new Date().getFullYear()} xxxsjan &{" "}
+          <a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
+            粤ICP备号-1
+          </a>
+        </p>
+      </footer> */}
     </div>
   );
 };
