@@ -92,13 +92,15 @@ async function fetchWeather(latitude: number, longitude: number, city?: string) 
 }
 
 const Homepage = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState<Date | null>(null);
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [quoteVisible, setQuoteVisible] = useState(true);
   const [weather, setWeather] = useState<WeatherInfo | null>(null);
   const [weatherStatus, setWeatherStatus] = useState<"loading" | "error">("loading");
 
   useEffect(() => {
+    setCurrentTime(new Date());
+
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
@@ -239,8 +241,12 @@ const Homepage = () => {
               </p>
             </div>
             <div className="bg-slate-800/40 backdrop-blur-md p-6 rounded-xl w-80 shadow-xl text-center">
-              <div className="text-white text-lg mb-2">{formatDate(currentTime)}</div>
-              <div className="text-white text-5xl font-mono font-bold my-2">{formatTime(currentTime)}</div>
+              <div className="text-white text-lg mb-2">
+                {currentTime ? formatDate(currentTime) : "---- 年 -- 月 -- 日 --"}
+              </div>
+              <div className="text-white text-5xl font-mono font-bold my-2">
+                {currentTime ? formatTime(currentTime) : "--:--:--"}
+              </div>
               <div className="text-white/60">
                 {weather
                   ? `${weather.city} ${weather.description} ${weather.temp}°C`
