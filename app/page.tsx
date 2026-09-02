@@ -100,10 +100,21 @@ const Homepage = () => {
   const [quoteVisible, setQuoteVisible] = useState(true);
   const [weather, setWeather] = useState<WeatherInfo | null>(null);
   const [weatherStatus, setWeatherStatus] = useState<"loading" | "error">("loading");
-  const [background, setBackground] = useState(BACKGROUNDS[0]);
+  const [background, setBackground] = useState<string | null>(null);
+  const [backgroundVisible, setBackgroundVisible] = useState(false);
 
   useEffect(() => {
-    setBackground(BACKGROUNDS[Math.floor(Math.random() * BACKGROUNDS.length)]);
+    const selected = BACKGROUNDS[Math.floor(Math.random() * BACKGROUNDS.length)];
+    const img = new Image();
+    img.src = selected;
+    img.onload = () => {
+      setBackground(selected);
+      requestAnimationFrame(() => setBackgroundVisible(true));
+    };
+    img.onerror = () => {
+      setBackground(selected);
+      setBackgroundVisible(true);
+    };
   }, []);
 
   useEffect(() => {
@@ -286,8 +297,16 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-0 left-0 w-full h-full transition duration-250 z-[-1] ">
-        <img src={background} alt="" className="w-full h-full object-cover" />
+      <div className="absolute top-0 left-0 w-full h-full z-[-1] bg-slate-900">
+        {background && (
+          <img
+            src={background}
+            alt=""
+            className={`w-full h-full object-cover transition-opacity duration-500 ${
+              backgroundVisible ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        )}
       </div>
       {/* <footer className="absolute bottom-4 left-0 w-full text-center text-white/60 text-sm z-10">
         <p>
