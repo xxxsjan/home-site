@@ -207,7 +207,7 @@ const Homepage = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="text-white/90 font-bold text-5xl italic tracking-wide">
+            <div className={`text-white/90 font-bold text-5xl italic tracking-wide ${fontPacifico.className}`}>
               xxxsjan
             </div>
           </div>
