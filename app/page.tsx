@@ -5,7 +5,7 @@ import {
   GithubIcon,
 } from "@/components/icons";
 import { Book, Github, Toolbox } from "lucide-react";
-import { fontLed } from "@/config/fonts";
+import { fontLed, fontPacifico } from "@/config/fonts";
 
 const QUOTES = [
   { text: "博文天下，遍理人间！", author: "网络" },
@@ -19,6 +19,8 @@ const QUOTES = [
   { text: "代码写千行，Bug 藏一处；修得一时稳，方知功夫足。", author: "程序员" },
   { text: "生活不止眼前的 Bug，还有诗和远方。", author: "改编" },
 ];
+
+const BACKGROUNDS = Array.from({ length: 10 }, (_, i) => `/background${i + 1}.jpg`);
 
 const DEFAULT_LOCATION = { latitude: 39.9042, longitude: 116.4074, city: "北京" };
 
@@ -98,6 +100,11 @@ const Homepage = () => {
   const [quoteVisible, setQuoteVisible] = useState(true);
   const [weather, setWeather] = useState<WeatherInfo | null>(null);
   const [weatherStatus, setWeatherStatus] = useState<"loading" | "error">("loading");
+  const [background, setBackground] = useState(BACKGROUNDS[0]);
+
+  useEffect(() => {
+    setBackground(BACKGROUNDS[Math.floor(Math.random() * BACKGROUNDS.length)]);
+  }, []);
 
   useEffect(() => {
     setCurrentTime(new Date());
@@ -208,7 +215,7 @@ const Homepage = () => {
             <div className="flex items-start gap-2">
               <span className="text-white/40 text-4xl -mt-2">“</span>
               <div>
-                <p className="text-white italic text-xl mb-2">Hello Stranger!</p>
+                <p className={`text-white text-xl mb-2 ${fontPacifico.className}`}>Hello Stranger!</p>
                 <p className="text-white/80">Bug 是意外，Feature 是惊喜。</p>
               </div>
               <span className="text-white/40 text-4xl -mb-2 self-end">”</span>
@@ -280,7 +287,7 @@ const Homepage = () => {
         </div>
       </div>
       <div className="absolute top-0 left-0 w-full h-full transition duration-250 z-[-1] ">
-        <img src="/background7.jpg" alt="" className='w-full h-full' />
+        <img src={background} alt="" className="w-full h-full object-cover" />
       </div>
     </div>
   );

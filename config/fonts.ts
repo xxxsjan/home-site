@@ -15,3 +15,8 @@ export const fontLed = localFont({
   src: "../public/fonts/UnidreamLED.ttf",
   variable: "--font-led",
 })
+
+export const fontPacifico = localFont({
+  src: "../public/fonts/Pacifico-Regular.ttf",
+  variable: "--font-pacifico",
+})
