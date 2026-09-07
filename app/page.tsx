@@ -280,7 +280,7 @@ const Homepage = () => {
             <div className="grid grid-cols-3 gap-4 w-full max-w-3xl">
               {
                 [
-                  { icon: <Book className="text-white" />, label: '博客', link: 'https://github.com/xxxsjan' },
+                  { icon: <Book className="text-white" />, label: '博客', link: 'https://blog.odep.shop' },
                   { icon: <Toolbox className="text-white" />, label: '工具', link: 'https://tool.odep.shop/' },
                 ].map((item, idx) => (
                   <div
