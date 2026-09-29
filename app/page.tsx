@@ -281,7 +281,7 @@ const Homepage = () => {
               {
                 [
                   { icon: <Book className="text-white" />, label: '博客', link: 'https://blog.odep.shop' },
-                  { icon: <Toolbox className="text-white" />, label: '工具', link: 'https://tool.odep.shop/' },
+                  { icon: <Toolbox className="text-white" />, label: '工具', link: 'https://tool.odep.shop/home' },
                 ].map((item, idx) => (
                   <div
                     key={idx}
